@@ -24,6 +24,9 @@ class InputWidget {
                 this._input.value = this._input.getAttribute('aria-valuenow');
 
                 this._removeInputElement();
+                if (+this._input.getAttribute('aria-valuenow') === 0) {
+                    this._roomsEl.style.display = 'none';
+                }
             }
         }
     }
