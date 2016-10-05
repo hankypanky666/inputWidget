@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <span id="changeRooms">
+        <input id="qtyRooms" type="text" readonly value="0" aria-valuemin="0" aria-valuenow="">
+        <button type="button" data-add-room oom id="plus">plus</button>
+        <button type="button" data-remove-room id="minus">minus</button>
+    </span>
+    <p id="rooms" style="display: none">
+
+    </p>
+
+    <script src="inputWidget.js"></script>
+
+    <script>
+        var options = {
+          element: document.querySelector('#changeRooms'),
+            roomsElement: document.querySelector('#rooms')
+        };
+
+        new InputWidget(options);
+    </script>
+</body>
+</html>
